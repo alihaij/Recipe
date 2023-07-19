@@ -20,19 +20,22 @@ class RecipeApp extends StatelessWidget {
 class RecipeCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xfff2f7f1),
-      body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Container(
-          color: Color.fromARGB(15, 153, 13, 13),
-          child: Row(
-            children: [
-              Image.network('https://picsum.photos/250?image=9'),
-              Text('Tamaki Tamiya'),
-            ],
-          ),
-        )
-      ]),
+    return MaterialApp(
+      home: Scaffold(
+        backgroundColor: Color(0xfff2f7f1),
+        body: SafeArea(
+          child: Column(children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage:
+                    NetworkImage('https://picsum.photos/250?image=9'),
+                radius: 50.5,
+              ),
+            ),
+            Text('Pizza'),
+          ]),
+        ),
+      ),
     );
   }
 }
