@@ -23,9 +23,14 @@ class RecipeCard extends StatelessWidget {
     return Scaffold(
       backgroundColor: Color(0xfff2f7f1),
       body: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        Card(
-          color: Color(0xfff2f7f1),
-          child: Row(children: [Text('Tamaki Tamiya')]),
+        Container(
+          color: Color.fromARGB(15, 153, 13, 13),
+          child: Row(
+            children: [
+              Image.network('https://picsum.photos/250?image=9'),
+              Text('Tamaki Tamiya'),
+            ],
+          ),
         )
       ]),
     );
